@@ -1,0 +1,1 @@
+﻿alter table if exists public.plano_anual add column if not exists componente_curricular_eol_id bigint not null;

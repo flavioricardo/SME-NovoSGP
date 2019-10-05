@@ -22,12 +22,14 @@ namespace SME.SGP.Dto
             TurmaId = turmaId;
         }
 
-
         [Required(ErrorMessage = "O ano deve ser informado")]
         public int? AnoLetivo { get; set; }
 
         [ListaTemElementos(ErrorMessage = "Os bimestres devem ser informados")]
         public IEnumerable<BimestrePlanoAnualDto> Bimestres { get; set; }
+
+        [Required(ErrorMessage = "A disciplina deve ser informada")]
+        public long ComponenteCurricularEolId { get; set; }
 
         [Required(ErrorMessage = "A escola deve ser informada")]
         public string EscolaId { get; set; }
